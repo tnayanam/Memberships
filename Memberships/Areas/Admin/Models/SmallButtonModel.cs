@@ -35,7 +35,7 @@ namespace Memberships.Areas.Admin.Models
 
 
 
-            };
+            }
         }
     }
 }
