@@ -18,8 +18,9 @@ namespace Memberships.Areas.Admin.Controllers
         public async Task<ActionResult> Index()
         {
             var products = await db.Products.ToListAsync();
-            var model = products.Convert(db);
-            return View(model.Result);
+            var model = await products.Convert(db);
+            //return View(model.Result);            
+            return View(model);
         }
 
         // GET: Admin/Product/Details/5
