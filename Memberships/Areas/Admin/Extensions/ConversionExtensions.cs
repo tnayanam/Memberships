@@ -10,6 +10,7 @@ namespace Memberships.Areas.Admin.Extensions
 {
     public static class ConversionExtensions
     {
+        // extension method to convert model to viewModel
         public static async Task<IEnumerable<ProductModel>> Convert(this IEnumerable<Product> products, ApplicationDbContext db)
         {
             var texts = await db.ProductLinkTexts.ToListAsync();
