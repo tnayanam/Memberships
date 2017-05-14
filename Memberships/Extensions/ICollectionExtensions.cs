@@ -4,6 +4,7 @@ using System.Web.Mvc;
 
 namespace Memberships.Extensions
 {
+    // dropdown
     public static class ICollectionExtensions
     {
         public static IEnumerable<SelectListItem> ToSelectListItem<T>(
