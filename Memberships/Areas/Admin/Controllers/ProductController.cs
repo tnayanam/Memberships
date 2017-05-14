@@ -45,7 +45,7 @@ namespace Memberships.Areas.Admin.Controllers
                 ProductLinkTexts = await db.ProductLinkTexts.ToListAsync(),
                 ProductTypes = await db.ProductTypes.ToListAsync()
             };
-            return View();
+            return View(model);
         }
 
         // POST: Admin/Product/Create

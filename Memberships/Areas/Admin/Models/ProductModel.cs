@@ -23,6 +23,7 @@ namespace Memberships.Areas.Admin.Models
 
         public int ProductLinkTextId { get; set; }
 
+        [DefaultValue(0)]
         public int ProductTypeId { get; set; }
         [DisplayName("Product Link Text")]
 
@@ -32,15 +33,15 @@ namespace Memberships.Areas.Admin.Models
 
         public ICollection<ProductType> ProductTypes { get; set; }
 
-        public string ProductType
-        {
-            get
-            {
-                return ProductTypes == null || ProductTypes.Count.Equals(0) ?
-                    string.Empty : ProductTypes.First(pt => pt.Id.Equals(ProductTypeId)).Title;
-            }
+        //public string ProductType
+        //{
+        //    get
+        //    {
+        //        return ProductTypes == null || ProductTypes.Count.Equals(0) ?
+        //            string.Empty : ProductTypes.First(pt => pt.Id.Equals(ProductTypeId)).Title;
+        //    }
 
-        }
+        //}
 
         public string ProductLinkText
         {

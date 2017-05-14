@@ -38,6 +38,16 @@
                 @Html.ValidationMessageFor(model => model.ImageUrl, "", new { @class = "text-danger" })
             </div>
         </div>
+        @*//Dropdown*@
+        <div class="form-group">
+            @Html.LabelFor(model => model.ProductLinkTexts, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.ProductLinkTextId,
+               Model.ProductLinkTexts.ToSelectListItem(Model.ProductLinkTextId),
+             new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.ProductLinkTextId, "", new { @class = "text-danger" })
+            </div>
+        </div>
 
         <div class="form-group">
             @Html.LabelFor(model => model.ProductTypes, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -46,19 +56,6 @@
                Model.ProductTypes.ToSelectListItem(Model.ProductTypeId),
             new { @class = "form-control" } )
                 @Html.ValidationMessageFor(model => model.ProductTypeId, "", new { @class = "text-danger" })
-            </div>
-        </div>
-        @*<div class="form-group">
-            @Html.DropDownListFor(model => model.ItemTypeId, new SelectList(Model.ItemTypes, "Id", "Title"), "", new { @class = "form-control" })
-        </div>*@
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.ProductLinkTexts, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownListFor(model => model.ProductLinkTextId,
-               Model.ProductLinkTexts.ToSelectListItem(Model.ProductLinkTextId),
-             new { @class = "form-control" } )
-                @Html.ValidationMessageFor(model => model.ProductLinkTextId, "", new { @class = "text-danger" })
             </div>
         </div>
 
