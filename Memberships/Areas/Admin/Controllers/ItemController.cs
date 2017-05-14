@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
+﻿using Memberships.Entities;
+using Memberships.Models;
 using System.Data.Entity;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Net;
-using System.Web;
+using System.Threading.Tasks;
 using System.Web.Mvc;
-using Memberships.Entities;
-using Memberships.Models;
 
 namespace Memberships.Areas.Admin.Controllers
 {
@@ -78,6 +74,10 @@ namespace Memberships.Areas.Admin.Controllers
             {
                 return HttpNotFound();
             }
+            item.ItemTypes = await db.ItemTypes.ToListAsync();
+            item.Parts = await db.Parts.ToListAsync();
+            item.Sections = await db.Sections.ToListAsync();
+
             return View(item);
         }
 
