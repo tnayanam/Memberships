@@ -2,7 +2,9 @@
 using Memberships.Areas.Admin.Models;
 using Memberships.Entities;
 using Memberships.Models;
+using System.Collections.Generic;
 using System.Data.Entity;
+using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using System.Web.Mvc;
@@ -35,7 +37,9 @@ namespace Memberships.Areas.Admin.Controllers
             {
                 return HttpNotFound();
             }
-            return View(product);
+
+            var model = await product.Convert(db);
+            return View(model);
         }
 
         // GET: Admin/Product/Create
@@ -78,7 +82,11 @@ namespace Memberships.Areas.Admin.Controllers
             {
                 return HttpNotFound();
             }
-            return View(product);
+
+            var prod = new List<Product>();
+            prod.Add(product);
+            var ProductModel = await prod.Convert(db);
+            return View(ProductModel.First());
         }
 
         // POST: Admin/Product/Edit/5
