@@ -10,7 +10,7 @@ namespace Memberships.Areas.Admin.Extensions
 {
     public static class ConversionExtensions
     {
-        // extension method to convert model to viewModel
+        // extension method to convert model to viewModel // conversion method
         public static async Task<IEnumerable<ProductModel>> Convert(this IEnumerable<Product> products, ApplicationDbContext db)
         {
             if (products.Count().Equals(0))
