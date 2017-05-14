@@ -77,6 +77,6 @@ C:\Users\lenovo\Documents\Visual Studio 2015\Projects\Memberships\Memberships\bi
 C:\Users\lenovo\Documents\Visual Studio 2015\Projects\Memberships\Memberships\bin\Microsoft.Owin.Security.Google.xml
 C:\Users\lenovo\Documents\Visual Studio 2015\Projects\Memberships\Memberships\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\lenovo\Documents\Visual Studio 2015\Projects\Memberships\Memberships\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\lenovo\Documents\Visual Studio 2015\Projects\Memberships\Memberships\obj\Debug\Memberships.csprojResolveAssemblyReference.cache
 C:\Users\lenovo\Documents\Visual Studio 2015\Projects\Memberships\Memberships\obj\Debug\Memberships.dll
 C:\Users\lenovo\Documents\Visual Studio 2015\Projects\Memberships\Memberships\obj\Debug\Memberships.pdb
-C:\Users\lenovo\Documents\Visual Studio 2015\Projects\Memberships\Memberships\obj\Debug\Memberships.csprojResolveAssemblyReference.cache
