@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Net;
-using System.Web;
-using System.Web.Mvc;
+﻿using Memberships.Areas.Admin.Models;
 using Memberships.Entities;
 using Memberships.Models;
+using System.Data.Entity;
+using System.Net;
+using System.Threading.Tasks;
+using System.Web.Mvc;
 
 namespace Memberships.Areas.Admin.Controllers
 {
@@ -38,9 +34,14 @@ namespace Memberships.Areas.Admin.Controllers
         }
 
         // GET: Admin/ProductItem/Create
-        public ActionResult Create()
+        public async Task<ActionResult> Create()
         {
-            return View();
+            var model = new ProductItemModel
+            {
+                Items = await db.Items.ToListAsync(),
+                Products = await db.Products.ToListAsync()
+            };
+            return View(model);
         }
 
         // POST: Admin/ProductItem/Create
